@@ -1,0 +1,43 @@
+set GEN:= PGT10 GT35 GT10 PG5371;  #These are the available generators, assumed one generator type per array
+
+param Cap:=
+PGT10 8.1
+GT35 13.4
+GT10 19.6
+PG5371 20.9;  #Capacity of the generators, units of MW
+
+param Cc:=
+PGT10 183900
+GT35 177600
+GT10 165900
+PG5371 199600;  #Fuel cost of the generators, units of $/MW/year
+
+param Cf:=
+PGT10 8100
+GT35 13400
+GT10 19600
+PG5371 20900;  #Fixed maintenance cost, units of $/year
+
+param C:=
+PGT10 1697500
+GT35 2600500
+GT10 3580000
+PG5371 2793000;  #Investment cost coefficient of each generator, $/year. Note that after year one, which is outside the scope of this paper, this value would not be included unless another generator must be purchased.
+
+param Cun:=
+PGT10 203310
+GT35 231098
+GT10 203310
+PG5371 287405;  #Unavailability cost coefficient for each generator type, $/MW/year
+
+param Cv:=
+PGT10 3000
+GT35 3000
+GT10 3000
+PG5371 3000;  #Variable cost coefficient for each generator, units of $/MW/year
+
+param Dav:= 9.3;  #Average demand on the generators, units of MW
+
+param Dmax:= 11.2;  #Maximum demand on the generators, units of MW
+
+param n:= 10;  #Max generator units per array, subjective
